@@ -1,0 +1,12 @@
+<div class="person-delete" *ngIf="person">
+  <h2>Delete Person</h2>
+  <p>Are you sure you want to delete <strong>{{ person.name }}</strong> ({{ person.email }})?</p>
+  <div class="actions">
+    <button (click)="confirmDelete()" [disabled]="isDeleting">Delete</button>
+    <button (click)="cancel()">Cancel</button>
+  </div>
+</div>
+
+<div *ngIf="!person">
+  Loading person...
+</div>

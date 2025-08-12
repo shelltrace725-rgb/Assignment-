@@ -1,0 +1,21 @@
+<div class="person-edit">
+  <h2>{{ isNew ? 'Add Person' : 'Edit Person' }}</h2>
+
+  <div *ngIf="loadError" class="error">{{ loadError }}</div>
+
+  <form #f="ngForm" (ngSubmit)="save()">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" [(ngModel)]="person.name" required />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" [(ngModel)]="person.email" required type="email" />
+    </div>
+
+    <div class="actions">
+      <button type="submit" [disabled]="isSaving || f.invalid">Save</button>
+      <button type="button" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+</div>

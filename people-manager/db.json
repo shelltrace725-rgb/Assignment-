@@ -1,0 +1,7 @@
+{
+  "people": [
+    { "id": 1, "name": "Ada Lovelace", "email": "ada@lovelace.io" },
+    { "id": 2, "name": "Alan Turing", "email": "alan@turing.org" },
+    { "id": 3, "name": "Grace Hopper", "email": "grace@hopper.net" }
+  ]
+}
